@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My E-commerce Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="logo">
+            🛍️ MyStore
+        </div><!-- NAVBAR -->
+    <header class="navbar">
+
+        <!-- Navigation Links -->
+
+       <nav class="nav-links">
+         <a href="#home">Home</a>
+         <a href="#products">Products</a>
+         <a href="#about">About</a>
+         <a href="#contact">Contact</a>
+       </nav>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" placeholder="Search products">
+            <button>🔍</button>
+        </div>
+
+        <!-- Cart -->
+       <div class="cart" onclick="openCart()">
+              🛒 Cart (<span id="cart-count">0</span>)
+       </div> 
+
+       <!-- Account -->
+       <div class="account-links">
+
+     <div id="login-register-links">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+     </div>
+
+         <button id="logout-btn">Logout</button>
+
+      </div>
+
+    </header>
+
+    <!-- =============================
+     HERO BANNER
+============================= -->
+
+<section class="hero-banner" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-small-title">
+            WELCOME TO MYSTORE
+        </p>
+
+        <h1>
+            Big Sale is Live!
+        </h1>
+
+        <p>
+            Discover amazing products at
+            special prices.
+        </p>
+
+        <button class="hero-btn"
+                onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">
+            Shop Now
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="image/hero_image.jpg"
+            alt="MyStore Sale"
+        >
+
+    </div>
+
+</section>
+
+    <!-- PRODUCTS SECTION -->
+<section class="products-section" id="products">
+
+    <h2>Our Products</h2>
+
+    <div class="products-container">
+
+        <!-- Product 1 -->
+        <div class="product-card" data-product-id="1">
+
+            <img src="image/tshirt.jpg" alt="T-Shirt">
+
+            <h3>Stylish T-Shirt</h3>
+
+            <p>Comfortable cotton T-Shirt for everyday use.</p>
+
+            <h4>₹499</h4>
+
+            <button class="add-cart">Add to Cart</button>
+
+            <a href="product-details.html?product=tshirt"
+   class="view-details">
+    View Details
+</a>
+
+        </div>
+
+
+        <!-- Product 2 -->
+        <div class="product-card" data-product-id="2">
+
+            <img src="image/headphones.jpg" alt="Headphones">
+
+            <h3>Wireless Headphones</h3>
+
+            <p>High quality wireless headphones with clear sound.</p>
+
+            <h4>₹1,499</h4>
+
+            <button class="add-cart">Add to Cart</button>
+ 
+             <a href="product-details.html?product=headphones"
+   class="view-details">
+    View Details
+</a>
+
+        </div>
+
+
+        <!-- Product 3 -->
+        <div class="product-card" data-product-id="3">
+
+            <img src="image/chair.jpg" alt="Office Chair">
+
+            <h3>Office Chair</h3>
+
+            <p>Comfortable chair for office and study.</p>
+
+            <h4>₹2,999</h4>
+
+            <button class="add-cart">Add to Cart</button>
+
+             <a href="product-details.html?product=chair"
+   class="view-details">
+    View Details
+</a>
+
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product-id="4">
+
+            <img src="image/shoes.jpg" alt="Shoes">
+
+            <h3>Running Shoes</h3>
+
+            <p>Lightweight and comfortable running shoes.</p>
+
+            <h4>₹1,999</h4>
+
+            <button class="add-cart">Add to Cart</button>
+
+            <a href="product-details.html?product=shoes"
+               class="view-details">
+    View Details
+    </a>
+
+        </div>
+
+        <!-- Product 5 -->
+<div class="product-card" data-product-id="5">
+
+    <img src="image/smartwatch.jpg" alt="Smart Watch">
+
+    <h3>Smart Watch</h3>
+
+    <p>
+        Stylish smart watch with fitness and health tracking features.
+    </p>
+
+    <h4>₹2,499</h4>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+    <a
+        href="product-details.html?product=smartwatch"
+        class="view-details"
+    >
+        View Details
+    </a>
+
+</div>
+
+
+<!-- Product 6 -->
+<div class="product-card" data-product-id="6">
+
+    <img src="image/backpack.jpg" alt="Laptop Backpack">
+
+    <h3>Laptop Backpack</h3>
+
+    <p>
+        Durable and spacious backpack for laptop and daily use.
+    </p>
+
+    <h4>₹1,299</h4>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+    <a
+        href="product-details.html?product=backpack"
+        class="view-details"
+    >
+        View Details
+    </a>
+
+</div>
+
+
+<!-- Product 7 -->
+<div class="product-card" data-product-id="7">
+
+    <img src="image/sunglasses.jpg" alt="Sunglasses">
+
+    <h3>Sunglasses</h3>
+
+    <p>
+        Trendy sunglasses with comfortable lightweight design.
+    </p>
+
+    <h4>₹799</h4>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+    <a
+        href="product-details.html?product=sunglasses"
+        class="view-details"
+    >
+        View Details
+    </a>
+
+</div>
+
+
+<!-- Product 8 -->
+<div class="product-card" data-product-id="8">
+
+    <img src="image/keyboard.jpg" alt="Mechanical Keyboard">
+
+    <h3>Mechanical Keyboard</h3>
+
+    <p>
+        Responsive mechanical keyboard for gaming and work.
+    </p>
+
+    <h4>₹1,899</h4>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+    <a
+        href="product-details.html?product=keyboard"
+        class="view-details"
+    >
+        View Details
+    </a>
+
+</div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+<!-- =============================
+     ABOUT SECTION
+============================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-container">
+
+        <div class="about-content">
+
+            <h2>About MyStore</h2>
+
+            <p>
+                Welcome to MyStore, your simple online
+                shopping destination.
+            </p>
+
+            <p>
+                We offer quality products including fashion,
+                electronics, accessories and everyday items
+                at affordable prices.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =============================
+     FOOTER
+============================= -->
+
+<footer class="footer">
+
+    <div class="footer-container" id="contact">
+
+        <!-- About -->
+        <div class="footer-section">
+
+            <h2>🛍️ MyStore</h2>
+
+            <p>
+                Your one-stop online store for
+                quality products at great prices.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#products">Products</a>
+
+            <a href="orders.html">My Orders</a>
+
+            <a href="login.html">Login</a>
+
+        </div>
+
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+
+            <h3>Customer Service</h3>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-section">
+
+            <h3>Contact</h3>
+
+            <p>📧 support@mystore.com</p>
+
+            <p>📞 +9675539501</p>
+
+            <p>📍 Uttar Pradesh, India</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MyStore. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
